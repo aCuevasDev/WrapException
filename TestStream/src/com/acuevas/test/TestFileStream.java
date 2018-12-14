@@ -5,13 +5,13 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
-public class TestStream<T> {
+public class TestFileStream<T> {
 
 	private static List<String> strings = Arrays.asList("aa", "bb");
 
 	private static void readAll() {
 		try {
-			strings.stream().map(File::new).forEach(TestStream::safeRead);
+			strings.stream().map(File::new).forEach(TestFileStream::safeRead);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
