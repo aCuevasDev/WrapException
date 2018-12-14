@@ -32,9 +32,9 @@ public class TestFileStream {
 
 	private static void read(File file) throws IOException {
 		// just doing random things to test the exception
-		if (file.getName() == "aa")
+		if (file.getName().equals("aa"))
 			System.out.println(file.getName());
-		if (file.getName() == "bb")
+		if (file.getName().equals("bb"))
 			throw new IOException("ERROR");
 	}
 
