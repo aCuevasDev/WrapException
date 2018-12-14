@@ -12,7 +12,7 @@ public class TestFileStream {
 	private static void readAll() {
 		try {
 			strings.stream().map(File::new).forEach(TestFileStream::safeRead);
-		} catch (Exception e) {
+		} catch (RuntimeException e) {
 			e.printStackTrace();
 		}
 	}
